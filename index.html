@@ -1,88 +1,87 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=640" />
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Omni-notes : " />
 
-    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
-    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <script type="text/javascript" src="javascripts/modernizr.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#main_content').headsmart()
-      })
-    </script>
-    <title>Omni-notes by federicoiosue</title>
+    <title>Omni-notes</title>
   </head>
 
   <body>
-    <a id="forkme_banner" href="https://github.com/federicoiosue/Omni-Notes">View on GitHub</a>
-    <div class="shell">
 
-      <header>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <h1>Omni-notes</h1>
-            <h2></h2>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-      </header>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/federicoiosue/Omni-Notes">View on GitHub</a>
 
-      <section id="downloads">
-        <span class="inner">
-          <a href="https://github.com/federicoiosue/Omni-Notes/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/federicoiosue/Omni-Notes/tarball/master" class="tgz"><em>download</em> .TGZ</a>
-        </span>
-      </section>
+          <h1 id="project_title">Omni-notes</h1>
+          <h2 id="project_tagline"></h2>
 
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/federicoiosue/Omni-Notes/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/federicoiosue/Omni-Notes/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
 
-      <span class="banner-fix"></span>
-
-
-      <section id="main_content">
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h1>
 <a name="omni-notes" class="anchor" href="#omni-notes"><span class="octicon octicon-link"></span></a>Omni-Notes</h1>
 
-<p>Note taking <b>open-source</b>application aimed to have both a <b>lightweight</b> footprint on system performances and <b>simple interface</b> but keeping <b>smart</b> behavior.</p>
+<p>Note taking <b>open-source</b> application aimed to have both a <b>simple interface</b> but keeping <b>smart</b> behavior.</p>
 
 <p>The project was created by the absence of such applications compatible with old phones and old versions of Android that would propose, however, an attractive look and aligned with the most recent design of the Google operating system</p>
 
 <p><strong>Follow the developments and post your comments and advice on Google+ Beta Comunity at <a href="http://goo.gl/eF6qqF">http://goo.gl/eF6qqF</a></strong></p>
 
-<p><strong><em>Help to complete translations is needed, if you want give me an hand please send me an e-mail!</em></strong></p>
+<p><em>Help to keep translations updated is always welcome, if you want give an hand checkout the translation project at <a href="https://crowdin.net/project/omni-notes/">Crowdin</a></em></p>
+
+<h2>
+<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h2>
 
 <p>Actually the following functions are implemented:</p>
 
 <ul>
 <li>Android KitKat-ready appearance</li>
 <li>Add, modify, delete notes</li>
-<li>Manage active and archived notes</li>
+<li>Manage active, archived notes and filter the ones with reminder</li>
 <li>Share notes</li>
-<li>Note searching</li>
-<li>Batch operations choosing multiple notes</li>
-<li>Export/import notes to backup</li>
-<li>Animations activables/deactivables</li>
-<li>Multimedia attachments</li>
-<li>Sketch-note mode</li>
-<li>To-do list</li>
+<li>Use tags to organize notes and add them some color</li>
+<li>Mask notes to avoid others to look at that without having the password</li>
+<li>Note searching and optimized search-as-you-type</li>
+<li>Batch operations choosing multiple notes: merge, archive, delete</li>
+<li>Export/import notes and settings to safe backup folder</li>
+<li>Multimedia attachments: all file types are supported!</li>
+<li>Sketch mode to add hand made drawings or notes</li>
+<li>To-do list with customizable behavior</li>
+<li>Gesture actions to delete and create notes in a faster way</li>
 </ul><p>Further developments will include:</p>
 
 <ul>
 <li>Notes sychronization</li>
-<li>Direct sharing of notes between devices with Omni Notes app installed</li>
 <li>Web interface to manage notes</li>
-<li>Gesture actions</li>
 </ul><p>You can find a complete changelog inside the application settings menu!</p>
 
-<p><img src="https://github.com/federicoiosue/Omni-Notes/blob/master/etc/play_store_pics/01.png" alt="Example Image"><img src="https://github.com/federicoiosue/Omni-Notes/blob/master/etc/play_store_pics/02.png" alt="Example Image"><img src="https://github.com/federicoiosue/Omni-Notes/blob/master/etc/play_store_pics/03.png" alt="Example Image"><img src="https://github.com/federicoiosue/Omni-Notes/blob/master/etc/play_store_pics/04.png" alt="Example Image"><img src="https://github.com/federicoiosue/Omni-Notes/blob/master/etc/play_store_pics/05.png" alt="Example Image"><img src="https://github.com/federicoiosue/Omni-Notes/blob/master/etc/play_store_pics/06.png" alt="Example Image"><img src="https://github.com/federicoiosue/Omni-Notes/blob/master/etc/play_store_pics/07.png" alt="Example Image"><img src="https://github.com/federicoiosue/Omni-Notes/blob/master/etc/play_store_pics/08.png" alt="Example Image"><img src="https://github.com/federicoiosue/Omni-Notes/blob/master/etc/play_store_pics/09.png" alt="Example Image"><img src="https://github.com/federicoiosue/Omni-Notes/blob/master/etc/play_store_pics/10.png" alt="Example Image"><img src="https://github.com/federicoiosue/Omni-Notes/blob/master/etc/play_store_pics/11.png" alt="Example Image"><img src="https://github.com/federicoiosue/Omni-Notes/blob/master/etc/play_store_pics/12.png" alt="Example Image"></p>
+<p><a href="https://raw.githubusercontent.com/federicoiosue/Omni-Notes/master/etc/play_store_pics/01.png"><img src="https://raw.githubusercontent.com/federicoiosue/Omni-Notes/master/etc/play_store_pics/thumb_00.png"></a>
+<a href="https://raw.githubusercontent.com/federicoiosue/Omni-Notes/master/etc/play_store_pics/02.png"><img src="https://raw.githubusercontent.com/federicoiosue/Omni-Notes/master/etc/play_store_pics/thumb_01.png"></a>
+<a href="https://raw.githubusercontent.com/federicoiosue/Omni-Notes/master/etc/play_store_pics/03.png"><img src="https://raw.githubusercontent.com/federicoiosue/Omni-Notes/master/etc/play_store_pics/thumb_02.png"></a>
+<a href="https://raw.githubusercontent.com/federicoiosue/Omni-Notes/master/etc/play_store_pics/04.png"><img src="https://raw.githubusercontent.com/federicoiosue/Omni-Notes/master/etc/play_store_pics/thumb_03.png"></a>
+<a href="https://raw.githubusercontent.com/federicoiosue/Omni-Notes/master/etc/play_store_pics/05.png"><img src="https://raw.githubusercontent.com/federicoiosue/Omni-Notes/master/etc/play_store_pics/thumb_04.png"></a>
+<a href="https://raw.githubusercontent.com/federicoiosue/Omni-Notes/master/etc/play_store_pics/06.png"><img src="https://raw.githubusercontent.com/federicoiosue/Omni-Notes/master/etc/play_store_pics/thumb_05.png"></a>
+<a href="https://raw.githubusercontent.com/federicoiosue/Omni-Notes/master/etc/play_store_pics/07.png"><img src="https://raw.githubusercontent.com/federicoiosue/Omni-Notes/master/etc/play_store_pics/thumb_06.png"></a>
+<a href="https://raw.githubusercontent.com/federicoiosue/Omni-Notes/master/etc/play_store_pics/08.png"><img src="https://raw.githubusercontent.com/federicoiosue/Omni-Notes/master/etc/play_store_pics/thumb_07.png"></a>
+<a href="https://raw.githubusercontent.com/federicoiosue/Omni-Notes/master/etc/play_store_pics/09.png"><img src="https://raw.githubusercontent.com/federicoiosue/Omni-Notes/master/etc/play_store_pics/thumb_08.png"></a>
+<a href="https://raw.githubusercontent.com/federicoiosue/Omni-Notes/master/etc/play_store_pics/10.png"><img src="https://raw.githubusercontent.com/federicoiosue/Omni-Notes/master/etc/play_store_pics/thumb_09.png"></a>
+<a href="https://raw.githubusercontent.com/federicoiosue/Omni-Notes/master/etc/play_store_pics/11.png"><img src="https://raw.githubusercontent.com/federicoiosue/Omni-Notes/master/etc/play_store_pics/thumb_10.png"></a>
+<a href="https://raw.githubusercontent.com/federicoiosue/Omni-Notes/master/etc/play_store_pics/12.png"><img src="https://raw.githubusercontent.com/federicoiosue/Omni-Notes/master/etc/play_store_pics/thumb_11.png"></a></p>
 
-<p>Try out the app on the <a href="https://play.google.com/store/apps/details?id=it.feio.android.omninotes">Play Store</a>.</p>
+<p><a href="https://play.google.com/store/apps/details?id=it.feio.android.omninotes"><img src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png"></a></p>
 
 <h2>
 <a name="dependencies" class="anchor" href="#dependencies"><span class="octicon octicon-link"></span></a>Dependencies</h2>
@@ -117,21 +116,27 @@ See the License for the specific language governing permissions and
 limitations under the License.
 </code></pre>
       </section>
-
-      <footer>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <p>this project by <a href="https://github.com/federicoiosue">federicoiosue</a> can be found on <a href="https://github.com/federicoiosue/Omni-Notes">GitHub</a></p>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
-        <span class="octocat"></span>
-      </footer>
-
     </div>
 
-    
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Omni-notes maintained by <a href="https://github.com/federicoiosue">federicoiosue</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-45502770-2");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
   </body>
 </html>
