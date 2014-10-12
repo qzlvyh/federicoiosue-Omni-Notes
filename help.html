@@ -1,211 +1,442 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta content="text/html; charset=utf-8" http-equiv="content-type">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=640">
-    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
-    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script type="text/javascript" src="javascripts/modernizr.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <meta content="chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=640" name="viewport">
+    <link href="stylesheets/core.css" media="screen" rel="stylesheet">
+    <link href="stylesheets/mobile.css" media=
+    "handheld, only screen and (max-device-width:640px)" rel="stylesheet">
+    <link href="stylesheets/pygment_trac.css" rel="stylesheet">
+    <script src="javascripts/modernizr.js" type="text/javascript"></script>
+    <script src=
+    "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type=
+    "text/javascript"></script>
+    <script src="javascripts/headsmart.min.js" type="text/javascript"></script>
     <script type="text/javascript">
-      $(document).ready(function () {
+  $(document).ready(function () {
         $('#main_content').headsmart()
       })
     </script>
+
     <title>Omni Notes by federicoiosue</title>
-  </head>
-  <body> <a id="forkme_banner" href="https://github.com/federicoiosue/Omni-Notes">View
-      on GitHub</a>
+</head>
+
+<body>
+    <a href="https://github.com/federicoiosue/Omni-Notes" id=
+    "forkme_banner">View on GitHub</a>
+
     <div class="shell">
-      <header> <span class="ribbon-outer"> <span class="ribbon-inner">
-            <h1><a href="http://federicoiosue.github.io/Omni-Notes/">Omni Notes</a></h1>
-          </span> <span class="left-tail"></span> <span class="right-tail"></span>
-        </span> </header>
-      <section id="downloads"> <span class="inner"> <a href="https://github.com/federicoiosue/Omni-Notes/zipball/master"
-            class="zip"><em>download</em> .ZIP</a><a href="https://github.com/federicoiosue/Omni-Notes/tarball/master"
-            class="tgz"><em>download</em> .TGZ</a> </span> </section>
-      <span class="banner-fix"></span>
-      <section id="main_content">
-        <h1 class="header-level-1" style="text-align: center;"><a name="omni-notes"
-            class="anchor" href="#omni-notes"><span class="octicon octicon-link"></span></a>Omni
-          Notes Help Online</h1>
-        <p><br>
-        </p>
-        <p class="header-level-4">Table Of Contents</p>
-        <ul>
-          <li class="header-level-5"><a href="#notes">Notes</a></li>
-          <ul>
-            <li class="header-level-5"><a id="notes_create_index" href="#notes_create">Create</a></li>
-            <li class="header-level-5"><a id="notes_archive_index" href="#notes_archive">Archive</a></li>
-            <li class="header-level-5"><a id="notes_trash_index" href="#notes_trash">Trash</a></li>
-            <li class="header-level-5"><a href="#notes_delete" id="notes_delete_index"><span
-                  style="color: #417090;"><span style="text-decoration: underline;">Delete</span></span></a></li>
-            <li class="header-level-5"><a id="notes_categorize_index" href="#notes_categorize">Categorize</a></li>
-            <li class="header-level-5"><a id="notes_tag_index" href="#Categorization%20and%20tagging">Tag</a></li>
-            <li class="header-level-5"><a id="notes_share_index">Share</a> </li>
-            <li class="header-level-5"><a id="notes_merge_index">Merge</a></li>
-          </ul>
-          <li class="header-level-5">Attachments</li>
-          <ul>
-            <li class="header-level-5">Add</li>
-            <li class="header-level-5">Remove</li>
-            <li class="header-level-5">Edit</li>
-          </ul>
-        </ul>
-        <br>
-        <hr style="width: 80%; height: 2px; color: #996633; margin-left: auto; margin-right: auto;">
-        <p class="header-level-4"><a class="header-level-4" id="notes">Notes</a></p>
-        <p style="margin-left: 40px;" class="header-level-5"><a class="header-level-5"
-            id="notes_create">Create</a> </p>
-        <p style="margin-left: 40px; text-align: justify;">&nbsp;&nbsp; Note can
-          simply added from the list screen by using the "<span style="font-weight: bold;">+</span>"
-          actionbar button or directly from inside the note editor by
-          horizontally swiping from the borders of the screen in direction of
-          the center.</p>
-        <div style="text-align: center;">
-          <div style="text-align: center; margin-left: 46px;"><img style="width: 220px; height: 363px;"
-              title="notes_add_1" alt="notes_add_1" src="images/screenshots/notes_add_1.png"><img
-              style="width: 220px; height: 363px;" title="notes_add_2" alt="notes_add_2"
-              src="images/screenshots/notes_add_2.png"><br>
-            <div style="text-align: right;"><a class="header-level-6" href="#notes_create_index">Go
-                back to Content Table</a></div>
-          </div>
-        </div>
-        <p style="margin-left: 40px;"><a class="header-level-4" id="notes_archive">Archive</a></p>
-        <p style="margin-left: 40px; text-align: justify;">Notes can be archived
-          by swiping with finger notes from list when in "Notes" navigation.
-          This behavior can be changed from settings to "directly trash note by
-          swiping it".</p>
-        <p style="margin-left: 40px; text-align: justify;">To archive multiple
-          notes at the same time long-press the first, then choose the others,
-          and finally use the menu to select the archive action.</p>
-        <div style="text-align: center; margin-left: 46px;"><img style="width: 220px; height: 364px;"
-            title="notes_archive_1" alt="notes_archive_1" src="images/screenshots/notes_archive_1.png"><img
-            style="width: 220px; height: 362px;" title="notes_archive_4" alt="notes_archive_4"
-            src="images/screenshots/notes_archive_4.png"><br>
-          <br>
-          <div style="text-align: justify;">This operation can also be undone by
-            touching the "undo" button on the appearing bar at bottom of the
-            screen.</div>
-          <img style="width: 220px; height: 364px;" title="notes_archive_2" alt="notes_archive_2"
-            src="images/screenshots/notes_archive_2.png"><br>
-          <br>
-          <div style="text-align: justify;">From inside the note editor you can
-            both archive or restore from archive a note using the option in the
-            overflow menu.</div>
-          <img style="width: 220px; height: 366px;" title="notes_archive_3" alt="notes_archive_3"
-            src="images/screenshots/notes_archive_3.png"><img style="width: 220px; height: 366px;"
-            title="notes_archive_5" alt="notes_archive_5" src="images/screenshots/notes_archive_5.png"><br>
-          <div style="text-align: right;"><a class="header-level-6" href="#notes_archive_index">Go
-              back to Content Table</a></div>
-        </div>
-        <p style="margin-left: 40px;"><a class="header-level-4" id="notes_trash">Trash</a></p>
-        <p style="margin-left: 40px; text-align: justify;">The trash can be used
-          to keep notes that you don't need anymore but that you still don't
-          want to delete.</p>
-        <p style="margin-left: 40px; text-align: justify;">Search will not find
-          them unless you specifically search from inside Trash itself.</p>
-        <p style="margin-left: 40px; text-align: justify;">Notes can be trashed
-          by swiping with finger notes from list when in "Archive" navigation or
-          directly from "Notes" navigation if you changed the standard behavior
-          using settings.</p>
-        <p style="margin-left: 40px; text-align: justify;">To trash multiple
-          notes at the same time long-press the first, then choose the others,
-          and finally use the menu to select the trash action.</p>
-        <div style="text-align: center; margin-left: 46px;"><img style="width: 220px; height: 350px;"
-            title="notes_trash_1" alt="notes_trash_1" src="images/screenshots/notes_trash_1.png"><img
-            style="width: 220px; height: 350px;" title="notes_trash_2" alt="notes_trash_2"
-            src="images/screenshots/notes_trash_2.png"><br>
-          <br>
-          <div style="text-align: center;">
-            <div style="text-align: justify;">This operation can also be undone
-              by touching the "undo" button on the appearing bar at bottom of
-              the screen.</div>
-            <img style="width: 220px; height: 364px;" title="notes_trash_3" alt="notes_trash_3"
-              src="images/screenshots/notes_trash_3.png"></div>
-          <br>
-          <div style="text-align: center;">From inside the note editor you can
-            both trash or restore from trash a note using the option in the
-            overflow menu.<br>
-            <img style="width: 220px; height: 362px;" title="notes_trash_4" alt="notes_trash_4"
-              src="images/screenshots/notes_trash_4.png"><img style="width: 220px; height: 362px;"
-              title="notes_trash_5" alt="notes_trash_5" src="images/screenshots/notes_trash_5.png"></div>
-        </div>
-        <div style="text-align: right; margin-left: 46px;"><a class="header-level-6"
-            href="file:///home/fede/Scaricati/Omni-Notes-gh-pages/help.html#notes_archive_index">Go
-            back to Content Table</a><br>
-          <br>
-        </div>
-        <p class="header-level-4" style="margin-left: 40px;"><a id="notes_delete">Delete</a></p>
-        <p style="margin-left: 40px; text-align: justify;">When you are sure you
-          don't need anymore some previously trashed notes and/or want to free
-          some space on device you can permanently delete them.</p>
-        <p style="margin-left: 40px; text-align: justify;">Notes can be deleted
-          by long-pressing the first, then choosing the others, and finally
-          using the menu to select the delete action. This can't be undone, so,
-          you'll be prompted for confirm.</p>
-        <div style="text-align: center; margin-left: 46px;"><img style="width: 220px; height: 364px;"
-            title="notes_delete_1" alt="notes_delete_1" src="images/screenshots/notes_delete_1.png"><img
-            style="width: 220px; height: 364px;" title="notes_delete_2" alt="notes_delete_2"
-            src="images/screenshots/notes_delete_2.png"><br>
-          <br>
-          <div style="text-align: justify;">From Trash swiping with finger on a
-            note or bulk selecting more of them and then clicking the restore
-            action will move them back to their previous state.<br>
-          </div>
-          <img style="width: 220px; height: 364px;" title="notes_delete_3" alt="notes_delete_3"
-            src="images/screenshots/notes_delete_3.png"><img style="width: 220px; height: 364px;"
-            title="notes_delete_4" alt="notes_delete_4" src="images/screenshots/notes_delete_4.png"><br>
-          <div style="text-align: right;"><a class="header-level-6" href="#notes_delete_index">Go
-              back to Content Table</a></div>
-        </div>
+        <header>
+            <span class="ribbon-outer"><span class=
+            "ribbon-inner"></span></span>
 
-        <p style="margin-left: 40px;"><a class="header-level-4" id="notes_categorize">Categorize</a></p>
-        <p style="margin-left: 40px; text-align: justify;">You can create how many colored categories
-          you want to organize your notes. They'll all be listed into the side
-          panel, on bottom of the standard navigation items.</p>
-        <p style="margin-left: 40px; text-align: justify;">To create a new category simply use the
-          action item that appears on title bar when side panel is opened.</p>
-        <p style="margin-left: 40px; text-align: justify;">Long-clicking on them is also possible to
-          modify previously created categories editing their name or color or to
-          delete them.</p>
-        <div style="text-align: center; margin-left: 46px;"><img style="width: 220px; height: 364px;"
-            title="notes_categorize_1" alt="notes_categorize_1" src="images/screenshots/notes_categorize_1.png"><img
-            style="width: 220px; height: 364px;" title="notes_categorize_2" alt="notes_categorize_2"
-            src="images/screenshots/notes_categorize_2.png"></div>
-        <p style="margin-left: 40px; text-align: justify;">>To associate notes with categories you can
-          both do it from the notes list or directly from inside note editor by
-          pressing the action item on title bar.</p>
-        <div style="text-align: center;"><img style="width: 220px; height: 366px;"
-            title="notes_categorize_3" alt="notes_categorize_3" src="images/screenshots/notes_categorize_3.png"></div>
+            <h1><span class="ribbon-outer"><a href=
+            "http://federicoiosue.github.io/Omni-Notes/">Omni Notes</a></span>
+            </h1>
+            <span class="left-tail"></span> <span class="right-tail"></span> 
+        </header>
 
-        <p class="header-level-4" style="margin-left: 40px;" id="notes_tag">Tag</p>
-        <p style="margin-left: 40px; text-align: justify;">A finer notes categorization can be achieved
-          adding hashtags to notes.</p>
-        <p style="margin-left: 40px; text-align: justify;">To create a new tag simply add an hash character (#)
-          followed by an unspaced phrase somewhere into the notes. It's possible to add more
-          of them.</p>
-        <p style="margin-left: 40px; text-align: justify;">After the note is saved the tags will become links and
-          by double-clicking on them all the other notes containing the same hashtag will be
-          searched.</p>
-        <div style="text-align: center; margin-left: 46px;"><img style="width: 220px; height: 364px;"
-            title="notes_tag_1" alt="notes_tag_1" src="images/screenshots/notes_tag_1.png"><img
-            style="width: 220px; height: 364px;" title="notes_tag_1" alt="notes_tag_2"
-            src="images/screenshots/notes_tag_2.png"></div>
-        <p style="margin-left: 40px; text-align: justify;">Also the standard search allows to search by tag simply using
-          the apposite action. This will show up a dialog with all the available hashtags.</p>
-        <div style="text-align: center; margin-left: 46px;"><img style="width: 220px; height: 366px;"
-            title="notes_tag_3" alt="notes_tag_3" src="images/screenshots/notes_tag_3.png">
-            <img style="width: 220px; height: 366px;"
-            title="notes_tag_4" alt="notes_tag_4" src="images/screenshots/notes_tag_4.png"></div>
 
-        <br>
-        <hr style="width: 80%; height: 2px; color: #996633; margin-left: auto; margin-right: auto;">
-        <p class="header-level-4">Attachments </p>
-      </section>
+        <section id="downloads">
+            <span class="inner"><a class="zip" href=
+            "https://github.com/federicoiosue/Omni-Notes/zipball/master"><em>download</em>
+            .ZIP</a><a class="tgz" href=
+            "https://github.com/federicoiosue/Omni-Notes/tarball/master"><em>download</em>
+            .TGZ</a></span>
+        </section>
+        <span class="banner-fix"></span>
+
+        <section id="main_content">
+            <h1 class="header-level-1" style="text-align: center;"><a class=
+            "anchor" href="#omni-notes" id="omni-notes" name=
+            "omni-notes"><span class="octicon octicon-link"></span></a>Omni
+            Notes Help Online</h1>
+
+
+            <p><br>
+            </p>
+
+
+            <p class="header-level-4">Table Of Contents</p>
+
+
+            <ul>
+                <li class="header-level-5">
+                    <a href="#notes">Notes</a>
+                </li>
+
+
+                <li style="list-style: none; display: inline">
+                    <ul>
+                        <li class="header-level-5">
+                            <a href="#notes_create" id=
+                            "notes_create_index">Create</a>
+                        </li>
+
+
+                        <li class="header-level-5">
+                            <a href="#notes_archive" id=
+                            "notes_archive_index">Archive</a>
+                        </li>
+
+
+                        <li class="header-level-5">
+                            <a href="#notes_trash" id=
+                            "notes_trash_index">Trash</a>
+                        </li>
+
+
+                        <li class="header-level-5">
+                            <a href="#notes_delete" id=
+                            "notes_delete_index"><span style=
+                            "color: #417090;"><span style=
+                            "text-decoration: underline;">Delete</span></span></a>
+                        </li>
+
+
+                        <li class="header-level-5">
+                            <a href="#notes_categorize" id=
+                            "notes_categorize_index">Categorize</a>
+                        </li>
+
+
+                        <li class="header-level-5">
+                            <a href="#Categorization%20and%20tagging" id=
+                            "notes_tag_index">Tag</a>
+                        </li>
+
+
+                        <li class="header-level-5">
+                            <a id="notes_share_index">Share</a>
+                        </li>
+
+
+                        <li class="header-level-5">
+                            <a id="notes_merge_index">Merge</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li class="header-level-5">Attachments</li>
+
+
+                <li style="list-style: none; display: inline">
+                    <ul>
+                        <li class="header-level-5">Add</li>
+
+
+                        <li class="header-level-5">Remove</li>
+
+
+                        <li class="header-level-5">Edit</li>
+                    </ul>
+                </li>
+            </ul>
+            <br>
+
+            <hr style=
+            "width: 80%; height: 2px; color: #996633; margin-left: auto; margin-right: auto;">
+
+
+
+            <p class="header-level-4"><a class="header-level-4" id=
+            "notes">Notes</a>
+            </p>
+
+
+            <p class="header-level-5" style="margin-left: 40px;"><a class=
+            "header-level-5" id="notes_create">Create</a>
+            </p>
+
+
+            <p style="margin-left: 40px; text-align: justify;">&nbsp;&nbsp;
+            Note can simply added from the list screen by using the
+            "<span style="font-weight: bold;">+</span>" actionbar button or
+            directly from inside the note editor by horizontally swiping from
+            the borders of the screen in direction of the center.</p>
+
+
+            <div style="text-align: center;">
+                <div style="text-align: center; margin-left: 46px;">
+                    <img alt="notes_add_1" src=
+                    "images/screenshots/notes_add_1.png" style=
+                    "width: 220px; height: 363px;" title=
+                    "notes_add_1"><img alt="notes_add_2" src=
+                    "images/screenshots/notes_add_2.png" style=
+                    "width: 220px; height: 363px;" title="notes_add_2"><br>
+
+
+                    <div style="text-align: right;">
+                        <a class="header-level-6" href="#notes_create_index">Go
+                        back to Content Table</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <p style="margin-left: 40px;"><a class="header-level-4" id=
+            "notes_archive">Archive</a>
+            </p>
+
+
+            <p style="margin-left: 40px; text-align: justify;">Notes can be
+            archived by swiping with finger notes from list when in "Notes"
+            navigation. This behavior can be changed from settings to "directly
+            trash note by swiping it".</p>
+
+
+            <p style="margin-left: 40px; text-align: justify;">To archive
+            multiple notes at the same time long-press the first, then choose
+            the others, and finally use the menu to select the archive
+            action.</p>
+
+
+            <div style="text-align: center; margin-left: 46px;">
+                <img alt="notes_archive_1" src=
+                "images/screenshots/notes_archive_1.png" style=
+                "width: 220px; height: 364px;" title=
+                "notes_archive_1"><img alt="notes_archive_4" src=
+                "images/screenshots/notes_archive_4.png" style=
+                "width: 220px; height: 362px;" title="notes_archive_4"><br>
+                <br>
+
+
+                <div style="text-align: justify;">
+                    This operation can also be undone by touching the "undo"
+                    button on the appearing bar at bottom of the screen.
+                </div>
+                <img alt="notes_archive_2" src=
+                "images/screenshots/notes_archive_2.png" style=
+                "width: 220px; height: 364px;" title="notes_archive_2"><br>
+                <br>
+
+
+                <div style="text-align: justify;">
+                    From inside the note editor you can both archive or restore
+                    from archive a note using the option in the overflow menu.
+                </div>
+                <img alt="notes_archive_3" src=
+                "images/screenshots/notes_archive_3.png" style=
+                "width: 220px; height: 366px;" title=
+                "notes_archive_3"><img alt="notes_archive_5" src=
+                "images/screenshots/notes_archive_5.png" style=
+                "width: 220px; height: 366px;" title="notes_archive_5"><br>
+
+
+                <div style="text-align: right;">
+                    <a class="header-level-6" href="#notes_archive_index">Go
+                    back to Content Table</a>
+                </div>
+            </div>
+
+
+            <p style="margin-left: 40px;"><a class="header-level-4" id=
+            "notes_trash">Trash</a>
+            </p>
+
+
+            <p style="margin-left: 40px; text-align: justify;">The trash can be
+            used to keep notes that you don't need anymore but that you still
+            don't want to delete.</p>
+
+
+            <p style="margin-left: 40px; text-align: justify;">Search will not
+            find them unless you specifically search from inside Trash
+            itself.</p>
+
+
+            <p style="margin-left: 40px; text-align: justify;">Notes can be
+            trashed by swiping with finger notes from list when in "Archive"
+            navigation or directly from "Notes" navigation if you changed the
+            standard behavior using settings.</p>
+
+
+            <p style="margin-left: 40px; text-align: justify;">To trash
+            multiple notes at the same time long-press the first, then choose
+            the others, and finally use the menu to select the trash
+            action.</p>
+
+
+            <div style="text-align: center; margin-left: 46px;">
+                <img alt="notes_trash_1" src=
+                "images/screenshots/notes_trash_1.png" style=
+                "width: 220px; height: 350px;" title="notes_trash_1"><img alt=
+                "notes_trash_2" src="images/screenshots/notes_trash_2.png"
+                style="width: 220px; height: 350px;" title="notes_trash_2"><br>
+                <br>
+
+
+                <div style="text-align: center;">
+                <div style="text-align: justify;">
+                    This operation can also be undone by touching the "undo"
+                    button on the appearing bar at bottom of the screen.
+                </div>
+                <img alt="notes_trash_3" src=
+                "images/screenshots/notes_trash_3.png" style=
+                "width: 220px; height: 364px;" title="notes_trash_3">
+                </div>
+                <br>
+
+
+                <div style="text-align: center;">From inside the note editor
+                you can both trash or restore from trash a note using the
+                option in the overflow menu.<br>
+                <img alt="notes_trash_4" src=
+                "images/screenshots/notes_trash_4.png" style=
+                "width: 220px; height: 362px;" title="notes_trash_4"><img alt=
+                "notes_trash_5" src="images/screenshots/notes_trash_5.png"
+                style="width: 220px; height: 362px;" title=
+                "notes_trash_5"></div>
+            </div>
+
+
+            <div style="text-align: right; margin-left: 46px;">
+                <a class="header-level-6" href=
+                "file:///home/fede/Scaricati/Omni-Notes-gh-pages/help.html#notes_archive_index">
+                Go back to Content Table</a><br>
+                <br>
+            </div>
+
+
+            <p class="header-level-4" style="margin-left: 40px;"><a id=
+            "notes_delete">Delete</a>
+            </p>
+
+
+            <p style="margin-left: 40px; text-align: justify;">When you are
+            sure you don't need anymore some previously trashed notes and/or
+            want to free some space on device you can permanently delete
+            them.</p>
+
+
+            <p style="margin-left: 40px; text-align: justify;">Notes can be
+            deleted by long-pressing the first, then choosing the others, and
+            finally using the menu to select the delete action. This can't be
+            undone, so, you'll be prompted for confirm.</p>
+
+
+            <div style="text-align: center; margin-left: 46px;">
+                <img alt="notes_delete_1" src=
+                "images/screenshots/notes_delete_1.png" style=
+                "width: 220px; height: 364px;" title="notes_delete_1"><img alt=
+                "notes_delete_2" src="images/screenshots/notes_delete_2.png"
+                style="width: 220px; height: 364px;" title=
+                "notes_delete_2"><br>
+                <br>
+
+
+                <div style="text-align: justify;">
+                    From Trash swiping with finger on a note or bulk selecting
+                    more of them and then clicking the restore action will move
+                    them back to their previous state.<br>
+                </div>
+                <img alt="notes_delete_3" src=
+                "images/screenshots/notes_delete_3.png" style=
+                "width: 220px; height: 364px;" title="notes_delete_3"><img alt=
+                "notes_delete_4" src="images/screenshots/notes_delete_4.png"
+                style="width: 220px; height: 364px;" title=
+                "notes_delete_4"><br>
+
+
+                <div style="text-align: right;">
+                    <a class="header-level-6" href="#notes_delete_index">Go
+                    back to Content Table</a>
+                </div>
+            </div>
+
+
+            <p style="margin-left: 40px;"><a class="header-level-4" id=
+            "notes_categorize">Categorize</a>
+            </p>
+
+
+            <p style="margin-left: 40px; text-align: justify;">You can create
+            how many colored categories you want to organize your notes.
+            They'll all be listed into the side panel, on bottom of the
+            standard navigation items.</p>
+
+
+            <p style="margin-left: 40px; text-align: justify;">To create a new
+            category simply use the action item that appears on title bar when
+            side panel is opened.</p>
+
+
+            <p style="margin-left: 40px; text-align: justify;">Long-clicking on
+            them is also possible to modify previously created categories
+            editing their name or color or to delete them.</p>
+
+
+            <div style="text-align: center; margin-left: 46px;"><img alt=
+            "notes_categorize_1" src=
+            "images/screenshots/notes_categorize_1.png" style=
+            "width: 220px; height: 364px;" title="notes_categorize_1"><img alt=
+            "notes_categorize_2" src=
+            "images/screenshots/notes_categorize_2.png" style=
+            "width: 220px; height: 364px;" title="notes_categorize_2">
+            </div>
+
+
+            <p style="margin-left: 40px; text-align: justify;">&gt;To associate
+            notes with categories you can both do it from the notes list or
+            directly from inside note editor by pressing the action item on
+            title bar.</p>
+
+
+            <div style="text-align: center;"><img alt="notes_categorize_3" src=
+            "images/screenshots/notes_categorize_3.png" style=
+            "width: 220px; height: 366px;" title="notes_categorize_3">
+            </div>
+
+
+            <p class="header-level-4" id="notes_tag" style=
+            "margin-left: 40px;">Tag</p>
+
+
+            <p style="margin-left: 40px; text-align: justify;">A finer notes
+            categorization can be achieved adding hashtags to notes.</p>
+
+
+            <p style="margin-left: 40px; text-align: justify;">To create a new
+            tag simply add an hash character (#) followed by an unspaced phrase
+            somewhere into the notes. It's possible to add more of them.</p>
+
+
+            <p style="margin-left: 40px; text-align: justify;">After the note
+            is saved the tags will become links and by double-clicking on them
+            all the other notes containing the same hashtag will be
+            searched.</p>
+
+
+            <div style="text-align: center; margin-left: 46px;"><img alt=
+            "notes_tag_1" src="images/screenshots/notes_tag_1.png" style=
+            "width: 220px; height: 364px;" title="notes_tag_1"><img alt=
+            "notes_tag_2" src="images/screenshots/notes_tag_2.png" style=
+            "width: 220px; height: 364px;" title="notes_tag_1">
+            </div>
+
+
+            <p style="margin-left: 40px; text-align: justify;">Also the
+            standard search allows to search by tag simply using the apposite
+            action. This will show up a dialog with all the available
+            hashtags.</p>
+
+
+            <div style="text-align: center; margin-left: 46px;"><img alt=
+            "notes_tag_3" src="images/screenshots/notes_tag_3.png" style=
+            "width: 220px; height: 366px;" title="notes_tag_3"> <img alt=
+            "notes_tag_4" src="images/screenshots/notes_tag_4.png" style=
+            "width: 220px; height: 366px;" title="notes_tag_4"></div>
+            <br>
+
+            <hr style=
+            "width: 80%; height: 2px; color: #996633; margin-left: auto; margin-right: auto;">
+
+
+
+            <p class="header-level-4">Attachments</p>
+        </section>
     </div>
-  </body>
+</body>
 </html>
