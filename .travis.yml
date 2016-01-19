@@ -11,8 +11,9 @@ jdk:
 
 branches:
   only:
-    - develop
     - master
+    - develop
+    - coverity_scan
 
 android:
   components:
