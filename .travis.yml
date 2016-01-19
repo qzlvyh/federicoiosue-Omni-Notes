@@ -1,3 +1,7 @@
+env:
+  global:
+    - secure: "aMCbPcvDaUgEpLgck6t7fI3NGgi82Ws84DP81v/UTXFVGMSfL6vc3fvjrKx63TRlXX0FCi78HVon8Fyg7MSOREO/aA1kao6Grb+I9yd4VlOOeEvyxfxVsGnhUkZ94584zAc7rol7eCcqe9UvutQ4JIgTOAEEV3qOvDn1Nsg1tS4="
+
 sudo: false
 
 language: android
@@ -33,6 +37,20 @@ android:
     # if you need to run emulator(s) during your tests
     #- sys-img-armeabi-v7a-android-19
 
+addons:
+  coverity_scan:
+
+    project:
+      name: "federicoiosue/Omni-Notes"
+      version: 5.3.0
+      description: "Open-source note-taking application for Android"
+
+    notification_email: federico.iosue@gmail.com
+
+    build_command_prepend: "./gradlew clean"
+    build_command: "./gradlew build"
+
+    branch_pattern: coverity_scan
 
 # Build
 script: ./gradlew --stacktrace clean build
