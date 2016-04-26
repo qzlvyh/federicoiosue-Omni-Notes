@@ -17,6 +17,13 @@
   -->
 <changelog bulletedList="true">
 
+    <changelogversion versionName="5.2.10" changeDate="Apr 27, 2016">
+        <changelogtext>[i]Improved[/i] Is now possible to create tags using any kind of words</changelogtext>
+        <changelogtext>[i]Improved[/i] Changed selected notes colorization</changelogtext>
+        <changelogtext>[i]Improved[/i] Updated Galician, Hungarian, Italian, Japanese translations (very thanks to translators)</changelogtext>
+        <changelogtext>[u]Fix[/u] Search by tags will now make search by match and no more by prefix</changelogtext>
+    </changelogversion>
+
     <changelogversion versionName="5.2.9" changeDate="Apr 9, 2016">
         <changelogtext>[i]Improved[/i] Updated Arabian and Chinese Traditional translations</changelogtext>
         <changelogtext>[u]Fix[/u] Crash reporting</changelogtext>
