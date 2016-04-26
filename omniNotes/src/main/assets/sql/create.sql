@@ -1,6 +1,6 @@
 -- Create table for NOTES
 CREATE
-	TABLE notes
+	VIRTUAL TABLE notes USING fts4
 	(
 		creation INTEGER PRIMARY KEY,
 		last_modification INTEGER,

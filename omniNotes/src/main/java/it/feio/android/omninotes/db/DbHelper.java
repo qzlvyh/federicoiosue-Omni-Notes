@@ -40,7 +40,7 @@ public class DbHelper extends SQLiteOpenHelper {
     // Database name
     private static final String DATABASE_NAME = Constants.DATABASE_NAME;
     // Database version aligned if possible to software version
-    private static final int DATABASE_VERSION = 501;
+    private static final int DATABASE_VERSION = 503;
     // Sql query file directory
     private static final String SQL_DIR = "sql";
 
@@ -97,11 +97,16 @@ public class DbHelper extends SQLiteOpenHelper {
 
 
 	public static synchronized DbHelper getInstance() {
-        if (instance == null) {
-            instance = new DbHelper(OmniNotes.getAppContext());
-        }
-        return instance;
-    }
+		return getInstance(OmniNotes.getAppContext());
+	}
+
+
+	public static synchronized DbHelper getInstance(Context context) {
+		if (instance == null) {
+			instance = new DbHelper(context);
+		}
+		return instance;
+	}
 
 
     private DbHelper(Context mContext) {
@@ -573,6 +578,7 @@ public class DbHelper extends SQLiteOpenHelper {
      */
     public List<Note> getNotesByPattern(String pattern) {
         int navigation = Navigation.getNavigation();
+		//FIXME: This should eventually be converted to FTS by tokenizing strings to allow suffix search
         String whereCondition = " WHERE "
                 + KEY_TRASHED + (navigation == Navigation.TRASH ? " IS 1" : " IS NOT 1")
                 + (navigation == Navigation.ARCHIVE ? " AND " + KEY_ARCHIVED + " IS 1" : "")
@@ -736,25 +742,19 @@ public class DbHelper extends SQLiteOpenHelper {
     /**
      * Retrieves all notes with specified tags
      */
-    public List<Note> getNotesByTag(String[] tags) {
-        // Select All Query
-        StringBuilder whereCondition = new StringBuilder();
-        whereCondition.append(" WHERE ");
-        for (int i = 0; i < tags.length; i++) {
-            if (i != 0) {
-                whereCondition.append(" AND ");
-            }
-            whereCondition.append("(" + KEY_CONTENT + " LIKE '%").append(tags[i]).append("%' OR ").append(KEY_TITLE)
-                    .append(" LIKE '%").append(tags[i]).append("%')");
-        }
+	public List<Note> getNotesByTag(String[] tags) {
+		StringBuilder whereCondition = new StringBuilder();
+		whereCondition.append(" WHERE " + TABLE_NOTES + " MATCH '");
+		for (String tag : tags) {
+			whereCondition.append(" ").append(tag);
+		}
+		// Trashed notes must be included in search results only if search if performed from trash
+		whereCondition.append("' AND " + KEY_TRASHED + " IS ").append(Navigation.checkNavigation(Navigation.TRASH) ?
+				"" : "" +
+				" NOT ").append(" 1");
 
-        // Trashed notes must be included in search results only if search if performed from trash
-        whereCondition.append(" AND " + KEY_TRASHED + " IS ").append(Navigation.checkNavigation(Navigation.TRASH) ? 
-                "" : "" +
-                " NOT ").append(" 1");
-
-        return getNotes(whereCondition.toString(), true);
-    }
+		return getNotes(whereCondition.toString(), true);
+	}
 
 
     /**
