@@ -1,5 +1,6 @@
 --
--- Converts 'notes' table into a virtual table to implement real full-text search
+-- Converts 'notes' table into a virtual table to implement real full-text search.
+-- Types and keys are ignored using FTS but they've been left as reminder
 --
 
 ALTER TABLE notes RENAME TO notes_tmp;

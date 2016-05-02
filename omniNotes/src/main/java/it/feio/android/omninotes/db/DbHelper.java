@@ -213,7 +213,11 @@ public class DbHelper extends SQLiteOpenHelper {
         boolean checklist = note.isChecklist() != null ? note.isChecklist() : false;
         values.put(KEY_CHECKLIST, checklist);
 
-		db.insertWithOnConflict(TABLE_NOTES, KEY_ID, values, SQLiteDatabase.CONFLICT_REPLACE);
+		if (note.get_id() != null) {
+			db.update(TABLE_NOTES, values, KEY_ID + " MATCH ?", new String[]{String.valueOf(note.get_id())});
+		} else {
+			db.insert(TABLE_NOTES, null, values);
+		}
 		Log.d(Constants.TAG, "Updated note titled '" + note.getTitle() + "'");
 
         // Updating attachments
@@ -282,18 +286,13 @@ public class DbHelper extends SQLiteOpenHelper {
      * Getting single note
      */
     public Note getNote(long id) {
-
-        String whereCondition = " WHERE "
-                + KEY_ID + " = " + id;
-
+        String whereCondition = " WHERE " + KEY_ID + " MATCH '" + id + "'";
         List<Note> notes = getNotes(whereCondition, true);
-        Note note;
         if (notes.size() > 0) {
-            note = notes.get(0);
+            return notes.get(0);
         } else {
-            note = null;
+			return null;
         }
-        return note;
     }
 
 
@@ -547,7 +546,7 @@ public class DbHelper extends SQLiteOpenHelper {
         boolean result = true;
         SQLiteDatabase db = getDatabase(true);
         // Delete notes
-        deletedNotes = db.delete(TABLE_NOTES, KEY_ID + " = ?", new String[]{String.valueOf(note.get_id())});
+        deletedNotes = db.delete(TABLE_NOTES, KEY_ID + " MATCH ?", new String[]{String.valueOf(note.get_id())});
         if (!keepAttachments) {
             // Delete note's attachments
             int deletedAttachments = db.delete(TABLE_ATTACHMENTS, KEY_ATTACHMENT_NOTE_ID + " = ?",
@@ -689,25 +688,15 @@ public class DbHelper extends SQLiteOpenHelper {
 
 
     /**
-     * Retrieves all tags
+	 * Retrieves all tags
      */
     public List<Tag> getTags() {
-        return getTags(null);
-    }
-
-
-    /**
-     * Retrieves all tags of a specified note
-     */
-    public List<Tag> getTags(Note note) {
         List<Tag> tags = new ArrayList<>();
         HashMap<String, Integer> tagsMap = new HashMap<>();
 
-        String whereCondition = " WHERE "
-                + (note != null ? KEY_ID + " = " + note.get_id() + " AND " : "")
-                + "(" + KEY_CONTENT + " LIKE '%#%' OR " + KEY_TITLE + " LIKE '%#%' " + ")"
-                + " AND " + KEY_TRASHED + " IS " + (Navigation.checkNavigation(Navigation.TRASH) ? "" : " NOT ") + " 1";
-        List<Note> notesRetrieved = getNotes(whereCondition, true);
+		String whereCondition = " WHERE " + TABLE_NOTES + " MATCH '#' AND " + KEY_TRASHED + " IS " + (Navigation
+				.checkNavigation(Navigation.TRASH) ? "" : " NOT ") + " 1";
+		List<Note> notesRetrieved = getNotes(whereCondition, true);
 
         for (Note noteRetrieved : notesRetrieved) {
             HashMap<String, Integer> tagsRetrieved = TagsHelper.retrieveTags(noteRetrieved);
@@ -716,12 +705,9 @@ public class DbHelper extends SQLiteOpenHelper {
                 tagsMap.put(s, ++count);
             }
         }
-
-        for (String s : tagsMap.keySet()) {
-            Tag tag = new Tag(s, tagsMap.get(s));
-            tags.add(tag);
+        for (String s: tagsMap.keySet()) {
+            tags.add(new Tag(s, tagsMap.get(s)));
         }
-
         Collections.sort(tags, (tag1, tag2) -> tag1.getText().compareToIgnoreCase(tag2.getText()));
         return tags;
     }

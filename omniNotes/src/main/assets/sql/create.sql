@@ -1,4 +1,4 @@
--- Create table for NOTES
+-- Create table for NOTES (types and keys are ignored using FTS)
 CREATE
 	VIRTUAL TABLE notes USING fts4
 	(
